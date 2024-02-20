@@ -6,3 +6,5 @@ Each solution is presented in the following format:
 - Solution class (inside src/main/java path)
 - Solution tests (inside src/test/java path)
 - Solution test inputs and outputs (inside src/test/resources path)
+
+To run a solution class, do it from its test class. It will trigger all the registered test cases against the referred solution.
