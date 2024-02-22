@@ -2,6 +2,7 @@ package com.vitorio.platformexercises.hackerrank.threemonthpreparationkit.week1.
 
 import com.vitorio.platformexercises.hackerrank.threemonthpreparationkit.week1.Bminimaxsum.MinMaxSumSolution;
 import com.vitorio.util.InputOutputFileReader;
+import com.vitorio.util.InputsOutputsTestCaseSource;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -13,6 +14,7 @@ import java.util.stream.Stream;
 
 public class MinMaxSumSolutionsTests {
 
+    private static final int INPUTS_AND_OUTPUTS = 2;
     private InputOutputFileReader fileReader;
 
     @BeforeEach
@@ -39,9 +41,6 @@ public class MinMaxSumSolutionsTests {
     }
 
     private static Stream<Arguments> inputsOutputsSource() {
-        return Stream.of(
-            Arguments.of("case0/input.txt", "case0/output.txt"),
-            Arguments.of("case1/input.txt", "case1/output.txt")
-        );
+        return InputsOutputsTestCaseSource.inputsOutputsSource("", INPUTS_AND_OUTPUTS);
     }
 }

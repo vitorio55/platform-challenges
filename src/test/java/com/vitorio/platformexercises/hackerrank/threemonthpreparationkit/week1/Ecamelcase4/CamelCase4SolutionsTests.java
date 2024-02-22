@@ -1,6 +1,7 @@
 package com.vitorio.platformexercises.hackerrank.threemonthpreparationkit.week1.Ecamelcase4;
 
 import com.vitorio.util.InputOutputFileReader;
+import com.vitorio.util.InputsOutputsTestCaseSource;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -12,6 +13,7 @@ import java.util.stream.Stream;
 
 public class CamelCase4SolutionsTests {
 
+    private static final int INPUTS_AND_OUTPUTS = 1;
     private InputOutputFileReader fileReader;
 
     @BeforeEach
@@ -38,8 +40,6 @@ public class CamelCase4SolutionsTests {
     }
 
     private static Stream<Arguments> inputsOutputsSource() {
-        return Stream.of(
-            Arguments.of("case0/input.txt", "case0/output.txt")
-        );
+        return InputsOutputsTestCaseSource.inputsOutputsSource("", INPUTS_AND_OUTPUTS);
     }
 }

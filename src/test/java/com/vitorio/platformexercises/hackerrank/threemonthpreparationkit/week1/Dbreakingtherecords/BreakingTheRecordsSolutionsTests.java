@@ -1,6 +1,7 @@
 package com.vitorio.platformexercises.hackerrank.threemonthpreparationkit.week1.Dbreakingtherecords;
 
 import com.vitorio.util.InputOutputFileReader;
+import com.vitorio.util.InputsOutputsTestCaseSource;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -13,6 +14,7 @@ import java.util.stream.Stream;
 
 public class BreakingTheRecordsSolutionsTests {
 
+    private static final int INPUTS_AND_OUTPUTS = 3;
     private InputOutputFileReader fileReader;
 
     @BeforeEach
@@ -41,10 +43,6 @@ public class BreakingTheRecordsSolutionsTests {
     }
 
     private static Stream<Arguments> inputsOutputsSource() {
-        return Stream.of(
-            Arguments.of("case0/input.txt", "case0/output.txt"),
-            Arguments.of("case1/input.txt", "case1/output.txt"),
-            Arguments.of("case2/input.txt", "case2/output.txt")
-        );
+        return InputsOutputsTestCaseSource.inputsOutputsSource("", INPUTS_AND_OUTPUTS);
     }
 }
