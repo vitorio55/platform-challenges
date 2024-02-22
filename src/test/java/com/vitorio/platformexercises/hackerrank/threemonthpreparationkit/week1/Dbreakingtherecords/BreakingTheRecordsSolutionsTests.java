@@ -27,6 +27,7 @@ public class BreakingTheRecordsSolutionsTests {
     @ParameterizedTest
     @MethodSource("inputsOutputsSource")
     void testSolution(String input, String output) throws IOException {
+        // Given
         String[] inputContent = fileReader.readFileContent(input);
         String[] outputContent = fileReader.readFileContent(output);
         StringBuilder expected = new StringBuilder();
@@ -39,6 +40,7 @@ public class BreakingTheRecordsSolutionsTests {
         StringBuilder actual = new StringBuilder();
         result.forEach(i -> actual.append(i).append(" "));
 
+        // Then
         Assertions.assertEquals(expected.toString(), actual.toString().trim());
     }
 

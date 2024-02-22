@@ -26,6 +26,7 @@ public class PlusMinusSolutionsTests {
     @ParameterizedTest
     @MethodSource("inputsOutputsSource")
     void testSolution(String input, String output) throws IOException {
+        // Given
         String[] inputContent = fileReader.readFileContent(input);
         String[] outputContent = fileReader.readFileContent(output);
         StringBuilder expected = new StringBuilder();
@@ -36,6 +37,7 @@ public class PlusMinusSolutionsTests {
         // When
         String result = PlusMinusSolution.main(inputContent);
 
+        // Then
         Assertions.assertEquals(expected.toString(), result);
     }
 

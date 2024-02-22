@@ -27,6 +27,7 @@ public class MinMaxSumSolutionsTests {
     @ParameterizedTest
     @MethodSource("inputsOutputsSource")
     void testSolution(String input, String output) throws IOException {
+        // Given
         String[] inputContent = fileReader.readFileContent(input);
         String[] outputContent = fileReader.readFileContent(output);
         StringBuilder expected = new StringBuilder();
@@ -37,6 +38,7 @@ public class MinMaxSumSolutionsTests {
         // When
         String result = MinMaxSumSolution.main(inputContent);
 
+        // Then
         Assertions.assertEquals(expected.toString(), result);
     }
 

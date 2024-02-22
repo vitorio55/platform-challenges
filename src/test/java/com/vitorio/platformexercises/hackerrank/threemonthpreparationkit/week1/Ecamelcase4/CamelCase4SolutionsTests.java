@@ -26,6 +26,7 @@ public class CamelCase4SolutionsTests {
     @ParameterizedTest
     @MethodSource("inputsOutputsSource")
     void testSolution(String input, String output) throws IOException {
+        // Given
         String[] inputContent = fileReader.readFileContent(input);
         String[] outputContent = fileReader.readFileContent(output);
         StringBuilder expected = new StringBuilder();
@@ -36,6 +37,7 @@ public class CamelCase4SolutionsTests {
         // When
         String result = CamelCase4Solution.main(inputContent);
 
+        // Then
         Assertions.assertEquals(expected.toString(), result);
     }
 
