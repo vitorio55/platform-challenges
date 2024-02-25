@@ -14,6 +14,11 @@ public class InputOutputFileReader {
         this.basePath = basePath;
     }
 
+    public File fileFromFilePath(String filePath) {
+        URL fileUrl = this.getClass().getResource(basePath + filePath);
+        return new File(fileUrl.getFile());
+    }
+
     public String[] readFileContent(String filePath) throws IOException {
         URL fileUrl = this.getClass().getResource(basePath + filePath);
         File file = new File(fileUrl.getFile());
