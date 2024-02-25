@@ -16,7 +16,13 @@ public class InputOutputFileReader {
 
     public File fileFromFilePath(String filePath) {
         URL fileUrl = this.getClass().getResource(basePath + filePath);
-        return new File(fileUrl.getFile());
+        File file;
+        try {
+            file = new File(fileUrl.getFile());
+        } catch (NullPointerException ex) {
+            throw new IllegalArgumentException("Missing test case input file.");
+        }
+        return file;
     }
 
     public String[] readFileContent(String filePath) throws IOException {
