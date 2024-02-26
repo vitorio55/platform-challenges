@@ -1,4 +1,4 @@
-package com.vitorio.platformexercises.hackerrank.threemonthpreparationkit.week2.Alonelyinteger;
+package com.vitorio.platformexercises.hackerrank.threemonthpreparationkit.week2.Cflippingbits;
 
 import com.vitorio.util.InputOutputFileReader;
 import com.vitorio.util.InputsOutputsTestCaseSource;
@@ -12,7 +12,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.stream.Stream;
 
-public class LonelyIntegerSolutionsTests {
+public class FlippingBitsSolutionsTests {
 
     private static final int INPUTS_AND_OUTPUTS = 1;
     private InputOutputFileReader fileReader;
@@ -20,7 +20,7 @@ public class LonelyIntegerSolutionsTests {
     @BeforeEach
     void setUp() {
         fileReader = new InputOutputFileReader(
-            "/platformexercises/hackerrank/threemonthpreparationkit/week2/Alonelyinteger/"
+            "/platformexercises/hackerrank/threemonthpreparationkit/week2/Cflippingbits/"
         );
     }
 
@@ -36,7 +36,25 @@ public class LonelyIntegerSolutionsTests {
         }
 
         // When
-        String actual = LonelyIntegerSolution.main(inputContent);
+        String actual = FlippingBitsSolution.main(inputContent);
+
+        // Then
+        Assertions.assertEquals(expected.toString(), actual);
+    }
+
+    @ParameterizedTest
+    @MethodSource("inputsOutputsSource")
+    void testMathPowSolution(String input, String output) throws IOException {
+        // Given
+        File inputContent = fileReader.fileFromFilePath(input);
+        String[] outputContent = fileReader.readFileContent(output);
+        StringBuilder expected = new StringBuilder();
+        for (String s : outputContent) {
+            expected.append(s);
+        }
+
+        // When
+        String actual = FlippingBitsMathPowSolution.main(inputContent);
 
         // Then
         Assertions.assertEquals(expected.toString(), actual);
