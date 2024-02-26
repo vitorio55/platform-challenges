@@ -28,6 +28,24 @@
             <version>5.10.1</version>
             <scope>test</scope>
         </dependency>
+        <!-- For code generation based on templates -->
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity</artifactId>
+            <version>1.7</version>
+        </dependency>
+        <!-- Using this so we can have properties defined in velocity.properties that are interpolated from other properties -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-configuration2</artifactId>
+            <version>2.9.0</version>
+        </dependency>
+        <!-- This one is required by the apache commons-configurations2-->
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.9.4</version>
+        </dependency>
     </dependencies>
 
 </project>
