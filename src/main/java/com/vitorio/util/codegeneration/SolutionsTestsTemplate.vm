@@ -1,6 +1,5 @@
 package com.vitorio.platformexercises.hackerrank.threemonthpreparationkit.${week}.${packageName};
 
-import com.vitorio.platformexercises.hackerrank.threemonthpreparationkit.${week}.${packageName}.${className}Solution;
 import com.vitorio.util.InputOutputFileReader;
 import com.vitorio.util.InputsOutputsTestCaseSource;
 import org.junit.jupiter.api.Assertions;
@@ -9,6 +8,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.stream.Stream;
 
@@ -28,7 +28,7 @@ public class ${className}SolutionsTests {
     @MethodSource("inputsOutputsSource")
     void testSolution(String input, String output) throws IOException {
         // Given
-        String[] inputContent = fileReader.readFileContent(input);
+        File inputContent = fileReader.fileFromFilePath(input);
         String[] outputContent = fileReader.readFileContent(output);
         StringBuilder expected = new StringBuilder();
         for (String s : outputContent) {
@@ -36,10 +36,10 @@ public class ${className}SolutionsTests {
         }
 
         // When
-        int result = ${className}Solution.main(inputContent);
+        String actual = ${className}Solution.main(inputContent);
 
-        // When
-        Assertions.assertEquals(expected.toString(), String.valueOf(result));
+        // Then
+        Assertions.assertEquals(expected.toString(), actual);
     }
 
     private static Stream<Arguments> inputsOutputsSource() {

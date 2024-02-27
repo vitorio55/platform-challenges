@@ -1,8 +1,9 @@
 package com.vitorio.platformexercises.hackerrank.threemonthpreparationkit.${week}.${packageName};
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -10,15 +11,14 @@ import static java.util.stream.Collectors.toList;
 
 public class ${className}Solution {
 
-    public static int main(String[] args) throws IOException {
-        List<List<Integer>> square = new ArrayList<>();
-        for (int i = 0; i < args.length; i++) {
-            List<Integer> row = Stream.of(args[i].replaceAll("\\s+$", "").split(" "))
-                .map(Integer::parseInt)
-                .collect(toList());
-            square.add(row);
-        }
-        return Result.formingMagicSquare(square);
+    public static String main(File input) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new FileReader(input));
+        int n = Integer.parseInt(bufferedReader.readLine().trim());
+        List<Integer> a = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
+            .map(Integer::parseInt)
+            .collect(toList());
+        bufferedReader.close();
+        return String.valueOf(Result.formingMagicSquare(a));
     }
 
     class Result {
