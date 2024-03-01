@@ -1,4 +1,4 @@
-package com.vitorio.platformexercises.hackerrank.threemonthpreparationkit.week2.Imocktest;
+package com.vitorio.platformexercises.hackerrank.threemonthpreparationkit.week3.Apermutingtwoarrays;
 
 import com.vitorio.util.InputOutputFileReader;
 import com.vitorio.util.InputsOutputsTestCaseSource;
@@ -12,15 +12,15 @@ import java.io.File;
 import java.io.IOException;
 import java.util.stream.Stream;
 
-public class FlippingTheMatrixSolutionsTests {
+public class PermutingTwoArraysSolutionsTests {
 
-    private static final int INPUTS_AND_OUTPUTS = 2;
+    private static final int INPUTS_AND_OUTPUTS = 5;
     private InputOutputFileReader fileReader;
 
     @BeforeEach
     void setUp() {
         fileReader = new InputOutputFileReader(
-            "/platformexercises/hackerrank/threemonthpreparationkit/week2/Imocktest/"
+            "/platformexercises/hackerrank/threemonthpreparationkit/week3/Apermutingtwoarrays/"
         );
     }
 
@@ -36,7 +36,7 @@ public class FlippingTheMatrixSolutionsTests {
         }
 
         // When
-        String actual = FlippingTheMatrixSolution.main(inputContent);
+        String actual = PermutingTwoArraysSolution.main(inputContent);
 
         // Then
         Assertions.assertEquals(expected.toString(), actual);
