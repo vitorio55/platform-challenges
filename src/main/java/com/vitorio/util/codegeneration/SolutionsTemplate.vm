@@ -12,13 +12,15 @@ import static java.util.stream.Collectors.toList;
 public class ${className}Solution {
 
     public static String main(File input) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new FileReader(input));
-        int n = Integer.parseInt(bufferedReader.readLine().trim());
-        List<Integer> a = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
-            .map(Integer::parseInt)
-            .collect(toList());
-        bufferedReader.close();
-        return String.valueOf(Result.formingMagicSquare(a));
+        StringBuilder sb = new StringBuilder();
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(input))) {
+            int n = Integer.parseInt(bufferedReader.readLine().trim());
+            List<Integer> a = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
+                .map(Integer::parseInt)
+                .collect(toList());
+            sb.append(Result.formingMagicSquare(a));
+        }
+        return sb.toString();
     }
 
     class Result {
