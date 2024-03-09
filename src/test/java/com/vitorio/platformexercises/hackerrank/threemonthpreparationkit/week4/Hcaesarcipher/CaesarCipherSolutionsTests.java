@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.util.stream.Stream;
 
 public class CaesarCipherSolutionsTests {
+
     private static final int INPUTS_AND_OUTPUTS = 2;
     private InputOutputFileReader fileReader;
 
