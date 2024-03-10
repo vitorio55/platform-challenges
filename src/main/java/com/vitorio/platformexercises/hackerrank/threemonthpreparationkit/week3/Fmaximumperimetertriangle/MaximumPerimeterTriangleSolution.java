@@ -20,7 +20,7 @@ public class MaximumPerimeterTriangleSolution {
         }
     }
 
-    class Result {
+    static class Result {
 
         /*
          * Complete the 'maximumPerimeterTriangle' function below.

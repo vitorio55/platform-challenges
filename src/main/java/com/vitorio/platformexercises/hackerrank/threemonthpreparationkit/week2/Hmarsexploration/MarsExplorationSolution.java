@@ -11,7 +11,7 @@ public class MarsExplorationSolution {
         }
     }
 
-    class Result {
+    static class Result {
 
         /*
          * Complete the 'marsExploration' function below.

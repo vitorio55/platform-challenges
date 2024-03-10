@@ -11,7 +11,7 @@ public class PangramsSolution {
         }
     }
 
-    class Result {
+    static class Result {
 
         /*
          * Complete the 'pangrams' function below.
@@ -21,11 +21,10 @@ public class PangramsSolution {
          */
 
         public static String pangrams(String s) {
-            // Write your code here
             String alphabet = "abcdefghijklmnopqrstuvwxyz";
             String normalized = s.toLowerCase();
             for (int i = 0; i < alphabet.length(); i++) {
-                Character alphabetLetter = Character.toLowerCase(alphabet.charAt(i));
+                char alphabetLetter = Character.toLowerCase(alphabet.charAt(i));
                 if (normalized.indexOf(alphabetLetter) == -1) {
                     return "not pangram";
                 }

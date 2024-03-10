@@ -23,7 +23,7 @@ public class LeftRotationSolution {
         return sb.toString().trim();
     }
 
-    class Result {
+    static class Result {
 
         /*
          * Complete the 'rotateLeft' function below.
@@ -35,7 +35,6 @@ public class LeftRotationSolution {
          */
 
         public static List<Integer> rotateLeft(int d, List<Integer> arr) {
-            // Write your code here
             Stack<Integer> intStack = new Stack<>();
             Stack<Integer> auxStack = new Stack<>();
 

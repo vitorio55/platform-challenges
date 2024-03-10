@@ -12,7 +12,7 @@ public class CountingValleysSolution {
         }
     }
 
-    class Result {
+    static class Result {
 
         /*
          * Complete the 'countingValleys' function below.

@@ -22,7 +22,7 @@ public class ClosestNumbersSolution {
         return sb.toString().trim();
     }
 
-    class Result {
+    static class Result {
 
         /*
          * Complete the 'closestNumbers' function below.

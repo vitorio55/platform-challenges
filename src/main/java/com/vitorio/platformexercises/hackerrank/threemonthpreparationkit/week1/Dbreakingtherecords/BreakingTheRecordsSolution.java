@@ -8,6 +8,7 @@ import java.util.stream.Stream;
 import static java.util.stream.Collectors.toList;
 
 public class BreakingTheRecordsSolution {
+
     public static List<Integer> main(String[] args) throws IOException {
         int n = Integer.parseInt(args[0]);
 
@@ -18,7 +19,7 @@ public class BreakingTheRecordsSolution {
         return Result.breakingRecords(scores);
     }
 
-    class Result {
+    static class Result {
 
         /*
          * Complete the 'breakingRecords' function below.
@@ -28,7 +29,6 @@ public class BreakingTheRecordsSolution {
          */
 
         public static List<Integer> breakingRecords(List<Integer> scores) {
-            // Write your code here
             int recordLowest = scores.get(0);
             int recordHighest = scores.get(0);
             int lowestBrokenTimes = 0;

@@ -24,7 +24,7 @@ public class FlippingBitsSolution {
         return sb.toString();
     }
 
-    class Result {
+    static class Result {
 
         /*
          * Complete the 'flippingBits' function below.

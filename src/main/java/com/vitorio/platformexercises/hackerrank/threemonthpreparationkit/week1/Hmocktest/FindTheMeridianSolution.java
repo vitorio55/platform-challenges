@@ -19,7 +19,7 @@ public class FindTheMeridianSolution {
         return String.valueOf(Result.findMedian(arr));
     }
 
-    class Result {
+    static class Result {
 
         /*
          * Complete the 'findMedian' function below.

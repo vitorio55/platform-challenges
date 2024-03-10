@@ -6,6 +6,7 @@ import java.util.stream.*;
 import static java.util.stream.Collectors.toList;
 
 public class PlusMinusSolution {
+
     public static String main(String[] args) throws IOException {
         int n = Integer.parseInt(args[0]);
         List<Integer> arr = Arrays.stream(args[1].split(" "))
@@ -15,7 +16,7 @@ public class PlusMinusSolution {
         return Result.plusMinus(arr);
     }
 
-    class Result {
+    static class Result {
 
         /*
          * Complete the 'plusMinus' function below.
@@ -24,14 +25,11 @@ public class PlusMinusSolution {
          */
 
         public static String plusMinus(List<Integer> arr) {
-            // Write your code here
             var doubleVals = arr.stream().map(Double::valueOf).collect(toList());
             var size = (double) arr.size();
-            StringBuilder sb = new StringBuilder();
-            sb.append(composePositivesRatio(doubleVals, size)).append("\n");
-            sb.append(composeNegativesRatio(doubleVals, size)).append("\n");
-            sb.append(composeZeroRatio(doubleVals, size)).append("\n");
-            return sb.toString();
+            return composePositivesRatio(doubleVals, size) + "\n" +
+                composeNegativesRatio(doubleVals, size) + "\n" +
+                composeZeroRatio(doubleVals, size) + "\n";
         }
 
         private static String composePositivesRatio(List<Double> arr, double size) {

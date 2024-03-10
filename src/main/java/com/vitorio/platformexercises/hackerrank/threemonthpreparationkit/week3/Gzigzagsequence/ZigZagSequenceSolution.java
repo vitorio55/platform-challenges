@@ -17,7 +17,7 @@ public class ZigZagSequenceSolution {
             int t = Integer.parseInt(bufferedReader.readLine().trim());
             for (int cs = 1; cs <= t; cs++) {
                 int n = Integer.parseInt(bufferedReader.readLine().trim());
-                int a[] = new int[n];
+                int[] a = new int[n];
                 String[] vals = bufferedReader.readLine().trim().split(" ");
                 IntStream.range(0, n).forEach(i -> a[i] = Integer.parseInt(vals[i]));
                 sb.append(Result.findZigZagSequence(a, n));
@@ -26,7 +26,7 @@ public class ZigZagSequenceSolution {
         }
     }
 
-    class Result {
+    static class Result {
 
         public static String findZigZagSequence(int[] a, int n) {
             StringBuilder sb = new StringBuilder();

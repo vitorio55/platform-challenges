@@ -20,7 +20,7 @@ public class LonelyIntegerSolution {
         return String.valueOf(Result.lonelyinteger(a));
     }
 
-    class Result {
+    static class Result {
 
         /*
          * Complete the 'lonelyinteger' function below.

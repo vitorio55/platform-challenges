@@ -3,7 +3,6 @@ package com.vitorio.platformexercises.hackerrank.threemonthpreparationkit.week1.
 import java.io.*;
 import java.util.*;
 import java.util.stream.*;
-import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
 public class MinMaxSumSolution {
@@ -15,7 +14,7 @@ public class MinMaxSumSolution {
         return Result.miniMaxSum(arr);
     }
 
-    class Result {
+    static class Result {
 
         /*
          * Complete the 'miniMaxSum' function below.
@@ -24,7 +23,6 @@ public class MinMaxSumSolution {
          */
 
         public static String miniMaxSum(List<Integer> arr) {
-            // Write your code here
             return composeMinSum(arr) + " " + composeMaxSum(arr);
         }
 

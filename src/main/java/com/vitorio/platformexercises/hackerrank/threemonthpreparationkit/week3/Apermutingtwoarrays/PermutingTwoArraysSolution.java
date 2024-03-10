@@ -33,7 +33,7 @@ public class PermutingTwoArraysSolution {
         return sb.toString();
     }
 
-    class Result {
+    static class Result {
 
         /*
          * Complete the 'twoArrays' function below.

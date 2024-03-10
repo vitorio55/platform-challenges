@@ -15,7 +15,7 @@ public class NumberLineJumpsSolution {
         }
     }
 
-    class Result {
+    static class Result {
 
         /*
          * Complete the 'kangaroo' function below.
@@ -29,7 +29,6 @@ public class NumberLineJumpsSolution {
          */
 
         public static String kangaroo(int x1, int v1, int x2, int v2) {
-            // Write your code here
             final int MAX_DISTANCE = 10000;
 
             for (int i = 0; i < MAX_DISTANCE; i++) {

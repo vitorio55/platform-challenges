@@ -26,7 +26,7 @@ public class SeparateTheNumbersSolution {
         return sb.toString();
     }
 
-    class Result {
+    static class Result {
 
         /*
          * Complete the 'separateNumbers' function below.
@@ -36,7 +36,7 @@ public class SeparateTheNumbersSolution {
 
         public static String separateNumbers(String s) {
             StringBuilder sb = new StringBuilder();
-            long numeric = 0;
+            long numeric;
             long first = 0;
 
             boolean isBeautiful = true;

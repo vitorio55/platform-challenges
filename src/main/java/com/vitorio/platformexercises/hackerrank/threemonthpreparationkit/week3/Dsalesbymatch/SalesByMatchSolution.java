@@ -23,7 +23,7 @@ public class SalesByMatchSolution {
         }
     }
 
-    class Result {
+    static class Result {
 
         /*
          * Complete the 'sockMerchant' function below.
@@ -35,7 +35,6 @@ public class SalesByMatchSolution {
          */
 
         public static int sockMerchant(int n, List<Integer> ar) {
-            // Write your code here
             Map<Integer, Integer> socks = new HashMap<>();
             int pairsNum = 0;
 

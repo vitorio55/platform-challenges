@@ -14,7 +14,7 @@ public class DrawingBookSolution {
         return sb.toString();
     }
 
-    class Result {
+    static class Result {
 
         /*
          * Complete the 'pageCount' function below.

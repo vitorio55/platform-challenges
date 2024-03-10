@@ -27,7 +27,7 @@ public class TowerBreakersSolution {
         return sb.toString();
     }
 
-    public class Result {
+    static class Result {
 
         /*
          * Complete the 'towerBreakers' function below.
@@ -50,7 +50,7 @@ public class TowerBreakersSolution {
                 return PLAYER_TWO;
             }
 
-            int lowestTowerDivisor = Integer.MIN_VALUE;
+            int lowestTowerDivisor;
 
             while (towerHeight != 1) {
                 currentPlayer = towers % 2 == 0 ? PLAYER_TWO : PLAYER_ONE;

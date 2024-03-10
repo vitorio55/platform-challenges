@@ -16,7 +16,7 @@ public class DivisibleSumPairsSolution {
         return Result.divisibleSumPairs(n, k, ar);
     }
 
-    class Result {
+    static class Result {
 
         /*
          * Complete the 'divisibleSumPairs' function below.
@@ -33,8 +33,8 @@ public class DivisibleSumPairsSolution {
             Map<Integer, Integer> occurrences = new HashMap<>();
             int pairs = 0;
 
-            for (int i = 0; i < ar.size(); i++) {
-                int remainder = ar.get(i) % k;
+            for (Integer integer : ar) {
+                int remainder = integer % k;
                 int complementMult = (k - remainder) % k;
                 pairs += occurrences.getOrDefault(complementMult, 0);
                 occurrences.put(remainder, occurrences.getOrDefault(remainder, 0) + 1);

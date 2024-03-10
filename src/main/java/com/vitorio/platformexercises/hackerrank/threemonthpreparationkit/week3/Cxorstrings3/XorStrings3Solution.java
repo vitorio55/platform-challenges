@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Scanner;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // This exercise is broken in Hackerrank as of jan 2024 and won't accept answers !!
@@ -25,7 +24,7 @@ public class XorStrings3Solution {
         return sb.toString();
     }
 
-    class Result {
+    static class Result {
 
         public static String stringsXOR(String s, String t) {
             StringBuilder res = new StringBuilder();

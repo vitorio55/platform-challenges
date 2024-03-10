@@ -31,7 +31,7 @@ public class GradingStudentsSolution {
         return sb.toString();
     }
 
-    class Result {
+    static class Result {
         /*
          * Complete the 'gradingStudents' function below.
          *

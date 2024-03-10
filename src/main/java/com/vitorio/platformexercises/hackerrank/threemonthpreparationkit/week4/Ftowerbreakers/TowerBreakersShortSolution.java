@@ -27,7 +27,7 @@ public class TowerBreakersShortSolution {
         return sb.toString();
     }
 
-    public class Result {
+    static class Result {
 
         /*
          * Complete the 'towerBreakers' function below.

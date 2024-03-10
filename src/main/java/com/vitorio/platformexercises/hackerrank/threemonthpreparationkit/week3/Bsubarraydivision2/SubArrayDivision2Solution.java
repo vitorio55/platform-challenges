@@ -23,7 +23,7 @@ public class SubArrayDivision2Solution {
         return sb.toString();
     }
 
-    class Result {
+    static class Result {
 
         /*
          * Complete the 'birthday' function below.

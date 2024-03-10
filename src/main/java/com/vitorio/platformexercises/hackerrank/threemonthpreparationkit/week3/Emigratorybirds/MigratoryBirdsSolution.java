@@ -18,7 +18,7 @@ public class MigratoryBirdsSolution {
         }
     }
 
-    class Result {
+    static class Result {
 
         /*
          * Complete the 'migratoryBirds' function below.

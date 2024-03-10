@@ -23,7 +23,7 @@ public class CountingSortSolution {
         return sb.toString().trim();
     }
 
-    class Result {
+    static class Result {
 
         /*
          * Complete the 'countingSort' function below.

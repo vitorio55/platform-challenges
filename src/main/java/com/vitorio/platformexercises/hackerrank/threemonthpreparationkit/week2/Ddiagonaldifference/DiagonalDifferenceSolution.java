@@ -29,7 +29,7 @@ public class DiagonalDifferenceSolution {
         return String.valueOf(Result.diagonalDifference(arr));
     }
 
-    class Result {
+    static class Result {
 
         /*
          * Complete the 'diagonalDifference' function below.

@@ -1,9 +1,6 @@
 package com.vitorio.platformexercises.hackerrank.threemonthpreparationkit.week1.Ctimeconversion;
 
-import java.io.*;
-
-import static java.util.stream.Collectors.joining;
-
+import java.io.IOException;
 
 public class TimeConversionSolution {
 
@@ -12,7 +9,7 @@ public class TimeConversionSolution {
         return Result.timeConversion(s);
     }
 
-    class Result {
+    static class Result {
 
         /*
          * Complete the 'timeConversion' function below.
@@ -22,7 +19,6 @@ public class TimeConversionSolution {
          */
 
         public static String timeConversion(String s) {
-            // Write your code here
             boolean isAm = s.contains("AM");
             boolean isPm = !isAm;
 

@@ -38,7 +38,7 @@ public class FlippingTheMatrixSolution {
         return sb.toString();
     }
 
-    class Result {
+    static class Result {
 
         /*
          * Complete the 'flippingMatrix' function below.

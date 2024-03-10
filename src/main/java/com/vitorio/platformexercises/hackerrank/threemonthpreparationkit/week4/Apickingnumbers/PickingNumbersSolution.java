@@ -19,7 +19,7 @@ public class PickingNumbersSolution {
         }
     }
 
-    class Result {
+    static class Result {
 
         /*
          * Complete the 'pickingNumbers' function below.
