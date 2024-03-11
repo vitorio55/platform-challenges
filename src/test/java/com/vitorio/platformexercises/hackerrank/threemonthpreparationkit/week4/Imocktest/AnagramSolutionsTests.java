@@ -17,7 +17,7 @@ public class AnagramSolutionsTests {
     private static final int INPUTS_AND_OUTPUTS = 5;
     private InputOutputFileReader fileReader;
 
-    private final AnagramArrayOfChangeLettersSumSolution arraySolution = new AnagramArrayOfChangeLettersSumSolution();
+    private final AnagramArrayOfLetterVariationSumsSolution arraySolution = new AnagramArrayOfLetterVariationSumsSolution();
     private final AnagramSolution solution = new AnagramSolution();
 
     @BeforeEach
@@ -47,7 +47,7 @@ public class AnagramSolutionsTests {
 
     @ParameterizedTest
     @MethodSource("inputsOutputsSource")
-    void testSolution_G4G(String input, String output) throws IOException {
+    void testSolution_ArrayOfLetterVariationSums(String input, String output) throws IOException {
         // Given
         File inputContent = fileReader.fileFromFilePath(input);
         String[] outputContent = fileReader.readFileContent(output);
@@ -64,6 +64,6 @@ public class AnagramSolutionsTests {
     }
 
     private static Stream<Arguments> inputsOutputsSource() {
-        return InputsOutputsTestCaseSource.inputsOutputsSource("4", INPUTS_AND_OUTPUTS);
+        return InputsOutputsTestCaseSource.inputsOutputsSource("", INPUTS_AND_OUTPUTS);
     }
 }

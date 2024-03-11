@@ -1,6 +1,6 @@
 package com.vitorio.platformexercises.hackerrank.threemonthpreparationkit.week4.Imocktest;
 
-public class AnagramArrayOfChangeLettersSumSolution extends AnagramBaseMain {
+public class AnagramArrayOfLetterVariationSumsSolution extends AnagramBaseMain {
 
     // https://www.geeksforgeeks.org/minimum-number-of-manipulations-required-to-make-two-strings-anagram-without-deletion-of-character/
 

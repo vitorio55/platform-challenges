@@ -42,6 +42,6 @@ public class PlusMinusSolutionsTests {
     }
 
     private static Stream<Arguments> inputsOutputsSource() {
-        return InputsOutputsTestCaseSource.inputsOutputsSource("case0", INPUTS_AND_OUTPUTS);
+        return InputsOutputsTestCaseSource.inputsOutputsSource("", INPUTS_AND_OUTPUTS);
     }
 }
