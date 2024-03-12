@@ -1,0 +1,69 @@
+package com.vitorio.platformexercises.hackerrank.threemonthpreparationkit.week5.Fthefullcountingsort;
+
+import com.vitorio.util.InputOutputFileReader;
+import com.vitorio.util.InputsOutputsTestCaseSource;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.stream.Stream;
+
+public class TheFullCountingSortSolutionsTests {
+
+    private static final int INPUTS_AND_OUTPUTS = 3;
+    private InputOutputFileReader fileReader;
+
+    private final TheFullCountingSortSolution solution = new TheFullCountingSortSolution();
+    private final TheFullCountingSortStreamSolution streamSolution = new TheFullCountingSortStreamSolution();
+
+    @BeforeEach
+    void setUp() {
+        fileReader = new InputOutputFileReader(
+            "/platformexercises/hackerrank/threemonthpreparationkit/week5/Fthefullcountingsort/"
+        );
+    }
+
+    @ParameterizedTest
+    @MethodSource("inputsOutputsSource")
+    void testSolution(String input, String output) throws IOException {
+        // Given
+        File inputContent = fileReader.fileFromFilePath(input);
+        String[] outputContent = fileReader.readFileContent(output);
+        StringBuilder expected = new StringBuilder();
+        for (String s : outputContent) {
+            expected.append(s);
+        }
+
+        // When
+        String actual = solution.main(inputContent);
+
+        // Then
+        Assertions.assertEquals(expected.toString(), actual);
+    }
+
+    @ParameterizedTest
+    @MethodSource("inputsOutputsSource")
+    void testSolution_Stream(String input, String output) throws IOException {
+        // Given
+        File inputContent = fileReader.fileFromFilePath(input);
+        String[] outputContent = fileReader.readFileContent(output);
+        StringBuilder expected = new StringBuilder();
+        for (String s : outputContent) {
+            expected.append(s);
+        }
+
+        // When
+        String actual = streamSolution.main(inputContent);
+
+        // Then
+        Assertions.assertEquals(expected.toString(), actual);
+    }
+
+    private static Stream<Arguments> inputsOutputsSource() {
+        return InputsOutputsTestCaseSource.inputsOutputsSource("", INPUTS_AND_OUTPUTS);
+    }
+}
