@@ -15,13 +15,9 @@ public abstract class SansaAndXorBaseMain {
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(input))) {
             int t = Integer.parseInt(bufferedReader.readLine());
             IntStream.range(0, t).forEach(i -> {
-                try {
-                    int n = Integer.parseInt(bufferedReader.readLine());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
                 List<Integer> arr = null;
                 try {
+                    int n = Integer.parseInt(bufferedReader.readLine());
                     arr = Arrays.stream(bufferedReader.readLine().split(" ")).map(Integer::parseInt).toList();
                 } catch (IOException e) {
                     e.printStackTrace();

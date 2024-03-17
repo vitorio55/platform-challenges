@@ -12,9 +12,7 @@ public class FlippingBitsMathPowSolution {
         IntStream.range(0, q).forEach(qItr -> {
             try {
                 long n = Long.parseLong(bufferedReader.readLine().trim());
-
                 sb.append(Result.flippingBits(n));
-
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
             }

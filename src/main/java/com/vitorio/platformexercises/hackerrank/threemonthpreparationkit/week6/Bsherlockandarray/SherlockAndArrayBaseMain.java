@@ -18,13 +18,9 @@ public abstract class SherlockAndArrayBaseMain {
             StringBuilder sb = new StringBuilder();
 
             IntStream.range(0, t).forEach(i -> {
-                try {
-                    int n = Integer.parseInt(bufferedReader.readLine());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
                 List<Integer> arr = null;
                 try {
+                    int n = Integer.parseInt(bufferedReader.readLine());
                     arr = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
                         .map(Integer::parseInt)
                         .collect(toList());
